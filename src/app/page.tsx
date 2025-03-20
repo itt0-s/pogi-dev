@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const contactEmailLink = process.env.CONTACT_EMAIL
   ? `mailto:${process.env.CONTACT_EMAIL}`
   : undefined;
