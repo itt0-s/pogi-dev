@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const FooterLink = z.object({
+export const NavLink = z.object({
   url: z.string().refine(
     (val) => {
       try {
@@ -14,8 +14,8 @@ export const FooterLink = z.object({
   title: z.string().min(1),
 });
 
-export type FooterLink = z.output<typeof FooterLink>;
+export type NavLink = z.output<typeof NavLink>;
 
-export const FooterLinks = z.array(FooterLink);
+export const NavLinks = z.array(NavLink);
 
-export type FooterLinks = z.output<typeof FooterLinks>;
+export type NavLinks = z.output<typeof NavLinks>;
